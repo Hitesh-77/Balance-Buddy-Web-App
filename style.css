@@ -33,6 +33,7 @@ h3{
 .balance{
     margin-top : 20px;
 }
+
 .transaction-container {
     text-align: left;
     margin : 18px;
@@ -40,4 +41,13 @@ h3{
 
 .items{
     margin-top:1.5rem;
+}
+table{
+    background-color: white;
+    color:black;
+    padding : 25px;
+    border-radius : 20px;
+}
+#HEAD{
+    font-size:20px;
 }

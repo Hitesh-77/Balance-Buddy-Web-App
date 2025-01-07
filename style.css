@@ -70,3 +70,54 @@ table{
     justify-content: space-between;
     margin:15px 600px 15px 0px;
 }
+.earning{
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.earning:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+.earning:active {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+    transform: scale(0.98);
+}
+
+.spend{
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.spend:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: scale(1.05);
+}
+
+.spend:active {
+    background-color: #bd2130;
+    border-color: #b21f2d;
+    transform: scale(0.98);
+}

@@ -136,3 +136,14 @@ input,select{
     justify-content: flex-end;
     margin: 50px 600px 0 0 ;
 }
+table tr{
+    transition: background-color .3s ease;
+}
+table tr:hover{
+    background-color:lightgray;
+    cursor : pointer;
+}
+#HEAD:hover{
+    background: transparent;
+    cursor:default;
+}

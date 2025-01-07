@@ -36,30 +36,33 @@
                     </div>
                 </div>
                 <div class="details">
-                    <h3>Add Transaction</h3>
+                    <h3>Add Transactions</h3>
                     <form>
                         <div class="form-container">
                             
                                 <div class="element">
                                     <label for="Category">Category</label>
-                                    <select id="Category">
-                                        <option>Rent</option>
+                                    <select required id="Category">
+                                        <option selected>Select</option>
+                                        <option>Food & Beverge</option>
                                         <option>Transport</option>
+                                        <option>Salary</option>
+                                        <option>+ Add Custom</option>
                                     </select>
                                 </div>
                                 <div class="element">
                                     <label for="Amount">Amount</label>
-                                    <input type="number" name="Amount" id="Amount">
+                                    <input required placeholder="Enter Amount" type="number" name="Amount" id="Amount">
                                 </div>
                                 <div class="element">
                                     <label for="Date">Date</label>
-                                    <input type="date" name="Date" id="Date">
+                                    <input required type="date" name="Date" id="Date">
                                 </div>
                             
                         </div>
                         <div class="buttons">
-                            <button class="earning">Earnings</button>
-                            <button class="spend">spend</button>
+                            <button class="earning">Income</button>
+                            <button class="spend">Expense</button>
                         </div>
                     </form>
                 </div>

@@ -133,10 +133,9 @@ table{
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     transition: background-color 0.2s ease, transform 0.2s ease;
     height:auto;
-    width:10rem;
+    width:5rem;
     float: right;
 }
 .cross:hover {

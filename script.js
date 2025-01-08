@@ -16,12 +16,19 @@ btn1.addEventListener("click",()=>
 
     if(category!="Select" && newAmt!="" && newDate!="")
     {
-        let [year,month,date] = newDate.split("-");
-        let formatDate = `${date}-${month}-${year}`;
-        balance += (newAmt);
+        if(newAmt >=0)
+        {
+            let [year,month,date] = newDate.split("-");
+            let formatDate = `${date}-${month}-${year}`;
+            balance += (newAmt);
 
-        addTransactions(category,"Income",newAmt,formatDate);
-        trackBalance(balance);
+            addTransactions(category,"Income",newAmt,formatDate);
+            trackBalance(balance);
+        }
+        else
+        {
+            alert("Amount Cannot be Negative");
+        }
     }
     else
     {
@@ -43,12 +50,19 @@ btn2.addEventListener("click",()=>
     
         if(category!="Select" && newAmt!="" && newDate!="")
         {
-            let [year,month,date] = newDate.split("-");
-            let formatDate = `${date}-${month}-${year}`;
-            balance-= newAmt;
+            if(newAmt >= 0)
+            {
+                let [year,month,date] = newDate.split("-");
+                let formatDate = `${date}-${month}-${year}`;
+                balance-= newAmt;
     
-            addTransactions(category,"Expense",newAmt,formatDate);
-            trackBalance(balance);
+                addTransactions(category,"Expense",newAmt,formatDate);
+                trackBalance(balance);
+            }
+            else
+            {
+                alert("Amount Cannot be Negative");
+            }
         }
         else
         {
@@ -78,6 +92,12 @@ function addTransactions(category,type,newAmt,formatDate)
 
     let table = document.querySelector("table");
     table.appendChild(row);
+
+    var btn4 = document.querySelector(".cross");
+    btn4.addEventListener("click",()=>
+    {
+        row.remove();
+    });    
 
 }
 

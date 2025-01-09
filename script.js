@@ -84,7 +84,7 @@ btn3.addEventListener("click",()=>
 });
 function addTransactions(category,type,newAmt,formatDate)
 {
-    let row = document.createElement("tr");
+    var row = document.createElement("tr");
     if(type == "Income")
     {row.innerHTML = `<td>${category}</td><td>${type}</td><td>$${newAmt}</td><td>${formatDate}</td><td><button class="cross">X</button></td>`;}
     else
@@ -93,13 +93,23 @@ function addTransactions(category,type,newAmt,formatDate)
     let table = document.querySelector("table");
     table.appendChild(row);
 
-    var btn4 = document.querySelector(".cross");
-    btn4.addEventListener("click",()=>
+    var crossbtn = row.querySelector(".cross");
+    crossbtn.addEventListener("click",()=>
     {
+        if(type == "Income")
+        {
+            balance -= newAmt;
+        }
+        else
+        {
+            balance += newAmt;
+        }
+        trackBalance(balance);
         row.remove();
     });    
 
 }
+
 
 function trackBalance(balance)
 {

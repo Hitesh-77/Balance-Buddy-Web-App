@@ -46,8 +46,8 @@ table{
     background-color: white;
     color:black;
     padding : 25px;
-    border-radius : 20px;
     border:0;
+    width: 80%;
 }
 #HEAD{
     font-size:20px;
@@ -197,4 +197,42 @@ table tr:hover{
     background: transparent;
     cursor:default;
 }
+.table-container {
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+    margin-top: 1.5rem;
+    border-radius:20px;
+}
 
+/* Ensure the table takes full width and has a fixed layout */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures consistent column widths */
+    border-radius:20px;
+}
+
+/* Style for table headers and cells */
+th, td {
+    border: 1px solid #ccc;
+    padding:12px;
+    padding-top:0;
+    padding-bottom:0;
+    margin-bottom:40px;
+    text-align: left;
+}
+
+/* Fix the header at the top */
+th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Keeps headers above body content */
+    padding:12px;
+}
+
+/* Remove top margin from items container */
+.items {
+    margin-top: 0;
+    
+}
